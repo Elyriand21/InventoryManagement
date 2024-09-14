@@ -44,6 +44,7 @@
             this.btnClearUser = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
+            this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +134,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(370, 23);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -156,7 +158,7 @@
             this.btnSaveUser.FlatAppearance.BorderSize = 0;
             this.btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveUser.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUser.Location = new System.Drawing.Point(254, 349);
+            this.btnSaveUser.Location = new System.Drawing.Point(135, 346);
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(85, 41);
             this.btnSaveUser.TabIndex = 3;
@@ -170,7 +172,7 @@
             this.btnUpdateUser.FlatAppearance.BorderSize = 0;
             this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUser.Location = new System.Drawing.Point(361, 349);
+            this.btnUpdateUser.Location = new System.Drawing.Point(242, 346);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(85, 41);
             this.btnUpdateUser.TabIndex = 3;
@@ -184,7 +186,7 @@
             this.btnClearUser.FlatAppearance.BorderSize = 0;
             this.btnClearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearUser.ForeColor = System.Drawing.Color.White;
-            this.btnClearUser.Location = new System.Drawing.Point(468, 349);
+            this.btnClearUser.Location = new System.Drawing.Point(349, 346);
             this.btnClearUser.Name = "btnClearUser";
             this.btnClearUser.Size = new System.Drawing.Size(85, 41);
             this.btnClearUser.TabIndex = 3;
@@ -207,6 +209,18 @@
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(370, 23);
             this.txtConfirmPass.TabIndex = 2;
+            this.txtConfirmPass.UseSystemPasswordChar = true;
+            // 
+            // checkBoxShowPass
+            // 
+            this.checkBoxShowPass.AutoSize = true;
+            this.checkBoxShowPass.Location = new System.Drawing.Point(453, 357);
+            this.checkBoxShowPass.Name = "checkBoxShowPass";
+            this.checkBoxShowPass.Size = new System.Drawing.Size(127, 21);
+            this.checkBoxShowPass.TabIndex = 8;
+            this.checkBoxShowPass.Text = "Show Password";
+            this.checkBoxShowPass.UseVisualStyleBackColor = true;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
             // UserModuleForm
             // 
@@ -214,6 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(607, 409);
+            this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.btnClearUser);
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.btnSaveUser);
@@ -259,5 +274,6 @@
         public System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtConfirmPass;
+        private System.Windows.Forms.CheckBox checkBoxShowPass;
     }
 }

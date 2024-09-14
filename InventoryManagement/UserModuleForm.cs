@@ -117,5 +117,20 @@ namespace InventoryManagement
             txtPhone.Clear();
             txtConfirmPass.Clear();
         }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            // If the box is not checked
+            if (checkBoxShowPass.Checked == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;   // Use the little ****** characters
+                txtConfirmPass.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = false;  // Show the password in plain text
+                txtConfirmPass.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

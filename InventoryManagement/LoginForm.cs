@@ -42,12 +42,14 @@ namespace InventoryManagement
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        // Method for if the user checks the Show Password checkbox
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
         {
+            // If the box is not checked
             if(checkBoxShowPass.Checked == false)
-                txtPassword.UseSystemPasswordChar = true;  
-            else
-                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = true;   // Use the little ****** characters
+            else    // If the box is checked
+                txtPassword.UseSystemPasswordChar = false;  // Show the password in plain text
         }
 
         private void btnExit_Click(object sender, EventArgs e)
