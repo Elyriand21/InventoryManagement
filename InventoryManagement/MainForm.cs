@@ -41,5 +41,11 @@ namespace InventoryManagement
             
             openChildForm(new UserForm());
         }
+
+        // Creates a method to write to the console easier
+        public void print(String msg)
+        {
+            System.Diagnostics.Debug.WriteLine(msg);
+        }
     }
 }
