@@ -53,5 +53,15 @@ namespace InventoryManagement
             openChildForm(new CustomerForm()); // Tells the main form to open the CustomerForm
 
         }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CategoryForm());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ProductForm());
+        }
     }
 }

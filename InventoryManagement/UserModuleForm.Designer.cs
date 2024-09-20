@@ -91,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 114);
+            this.label2.Location = new System.Drawing.Point(92, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(183, 111);
+            this.txtUserName.Location = new System.Drawing.Point(183, 87);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(370, 23);
             this.txtUserName.TabIndex = 0;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 162);
+            this.label3.Location = new System.Drawing.Point(92, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 1;
@@ -115,7 +115,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(183, 159);
+            this.txtFullName.Location = new System.Drawing.Point(183, 135);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(370, 23);
             this.txtFullName.TabIndex = 1;
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(92, 210);
+            this.label4.Location = new System.Drawing.Point(92, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 17);
             this.label4.TabIndex = 1;
@@ -131,7 +131,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(183, 207);
+            this.txtPassword.Location = new System.Drawing.Point(183, 183);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(370, 23);
             this.txtPassword.TabIndex = 2;
@@ -140,7 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(112, 306);
+            this.label5.Location = new System.Drawing.Point(112, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 1;
@@ -148,7 +148,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(183, 303);
+            this.txtPhone.Location = new System.Drawing.Point(183, 279);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(370, 23);
             this.txtPhone.TabIndex = 4;
@@ -159,7 +159,7 @@
             this.btnSaveUser.FlatAppearance.BorderSize = 0;
             this.btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveUser.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUser.Location = new System.Drawing.Point(135, 346);
+            this.btnSaveUser.Location = new System.Drawing.Point(135, 322);
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(85, 41);
             this.btnSaveUser.TabIndex = 3;
@@ -174,7 +174,7 @@
             this.btnUpdateUser.FlatAppearance.BorderSize = 0;
             this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUser.Location = new System.Drawing.Point(242, 346);
+            this.btnUpdateUser.Location = new System.Drawing.Point(242, 322);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(85, 41);
             this.btnUpdateUser.TabIndex = 3;
@@ -189,7 +189,7 @@
             this.btnClearUser.FlatAppearance.BorderSize = 0;
             this.btnClearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearUser.ForeColor = System.Drawing.Color.White;
-            this.btnClearUser.Location = new System.Drawing.Point(349, 346);
+            this.btnClearUser.Location = new System.Drawing.Point(349, 322);
             this.btnClearUser.Name = "btnClearUser";
             this.btnClearUser.Size = new System.Drawing.Size(85, 41);
             this.btnClearUser.TabIndex = 3;
@@ -201,7 +201,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 261);
+            this.label6.Location = new System.Drawing.Point(36, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 17);
             this.label6.TabIndex = 1;
@@ -209,7 +209,7 @@
             // 
             // txtConfirmPass
             // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(183, 255);
+            this.txtConfirmPass.Location = new System.Drawing.Point(183, 231);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(370, 23);
             this.txtConfirmPass.TabIndex = 3;
@@ -218,7 +218,7 @@
             // checkBoxShowPass
             // 
             this.checkBoxShowPass.AutoSize = true;
-            this.checkBoxShowPass.Location = new System.Drawing.Point(453, 357);
+            this.checkBoxShowPass.Location = new System.Drawing.Point(453, 333);
             this.checkBoxShowPass.Name = "checkBoxShowPass";
             this.checkBoxShowPass.Size = new System.Drawing.Size(127, 21);
             this.checkBoxShowPass.TabIndex = 8;
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(607, 409);
+            this.ClientSize = new System.Drawing.Size(607, 392);
             this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.btnClearUser);
             this.Controls.Add(this.btnUpdateUser);

@@ -21,8 +21,7 @@ namespace InventoryManagement
         public CustomerForm()
         {
             InitializeComponent();
-            // Loads the customers into the form
-            LoadCustomer();
+            LoadCustomer();         // Loads the customers into the form
         }
 
         public void LoadCustomer()
@@ -80,7 +79,7 @@ namespace InventoryManagement
 
                     // Creates a SQL commands to delete the entry in the database that matches the customerId
                     cm = new SqlCommand("DELETE FROM tbCustomer WHERE customerId LIKE '" + dgvCustomers.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    cm.ExecuteNonQuery();   // Tells the database to delete. We use this instead of ExecuteQuery because we're modifying, not querying
                     con.Close();    // Closes the connection to the SQL server
                     MessageBox.Show("Customer has been successfully deleted!");
                 }

@@ -19,12 +19,11 @@ namespace InventoryManagement
         SqlDataReader dr;   // Creates a null DataReader object so that we can read the information from the SQL database
         public UserForm()
         {
-            // Creates the form
-            InitializeComponent();
-            // Immediately loads all of the users into the form
-            LoadUser();
+            InitializeComponent();            // Creates the form
+            LoadUser();                       // Immediately loads all of the users into the form
         }
 
+        // Method to handle what happens when the cell is clicked
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvUsers.Columns[e.ColumnIndex].Name;  // Whenever a cell is clicked, this indicates the name of the column
@@ -47,13 +46,13 @@ namespace InventoryManagement
             // If the column is DELETE
             else if(colName== "Delete")
             {
-                // Display a box assuring that user wants to delete the selected user
+                // Display a box assuring that the operator wants to delete the selected user
                 if (MessageBox.Show("Are you sure you want to delete this user?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open(); // Opens the connection to the SQL server
                     // Creates a SQL commands to delete the entry in the database that matches the username
                     cm = new SqlCommand("DELETE FROM tbUser WHERE username LIKE '" + dgvUsers.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    cm.ExecuteNonQuery();   // Tells the database to delete. We use this instead of ExecuteQuery because we're modifying, not querying
                     con.Close();    // Closes the connection to the SQL server
                     MessageBox.Show("User has been successfully deleted!");
                 }
@@ -83,11 +82,11 @@ namespace InventoryManagement
         // Method for adding a new user
         private void btnUserAdd_Click(object sender, EventArgs e)
         {
-            UserModuleForm userModule = new UserModuleForm();   // Creates a new UserModule form
-            userModule.btnSaveUser.Enabled = true;  // Since we're adding a new user, we need to save to the database
-            userModule.btnUpdateUser.Enabled = false;   // No need to update as this user does NOT exist within the database 
-            userModule.ShowDialog();    // Shows the form
-            LoadUser(); // Loads the users from the database
+            UserModuleForm userModule = new UserModuleForm();           // Creates a new UserModule form
+            userModule.btnSaveUser.Enabled = true;                      // Since we're adding a new user, we need to save to the database
+            userModule.btnUpdateUser.Enabled = false;                   // No need to update as this user does NOT exist within the database 
+            userModule.ShowDialog();                                    // Shows the form
+            LoadUser();                                                 // Loads the users from the database
         }
     }
 }

@@ -162,6 +162,7 @@
             this.btnCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCategories.TabIndex = 0;
             this.btnCategories.TabStop = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnCustomers
             // 
@@ -187,6 +188,7 @@
             this.btnProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnProduct.TabIndex = 0;
             this.btnProduct.TabStop = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // label3
             // 
@@ -252,6 +254,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
