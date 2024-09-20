@@ -28,73 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClearUser = new System.Windows.Forms.Button();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnSaveUser = new System.Windows.Forms.Button();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.btnClearProduct = new System.Windows.Forms.Button();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.btnSaveProduct = new System.Windows.Forms.Button();
+            this.txtProductDescription = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtProductPrice = new System.Windows.Forms.TextBox();
+            this.txtProductQty = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboQty = new System.Windows.Forms.ComboBox();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
+            this.lblProductID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnClearUser
+            // btnClearProduct
             // 
-            this.btnClearUser.BackColor = System.Drawing.Color.Maroon;
-            this.btnClearUser.FlatAppearance.BorderSize = 0;
-            this.btnClearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearUser.ForeColor = System.Drawing.Color.White;
-            this.btnClearUser.Location = new System.Drawing.Point(466, 320);
-            this.btnClearUser.Name = "btnClearUser";
-            this.btnClearUser.Size = new System.Drawing.Size(85, 41);
-            this.btnClearUser.TabIndex = 18;
-            this.btnClearUser.TabStop = false;
-            this.btnClearUser.Text = "Clear";
-            this.btnClearUser.UseVisualStyleBackColor = false;
+            this.btnClearProduct.BackColor = System.Drawing.Color.Maroon;
+            this.btnClearProduct.FlatAppearance.BorderSize = 0;
+            this.btnClearProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearProduct.ForeColor = System.Drawing.Color.White;
+            this.btnClearProduct.Location = new System.Drawing.Point(466, 320);
+            this.btnClearProduct.Name = "btnClearProduct";
+            this.btnClearProduct.Size = new System.Drawing.Size(85, 41);
+            this.btnClearProduct.TabIndex = 18;
+            this.btnClearProduct.TabStop = false;
+            this.btnClearProduct.Text = "Clear";
+            this.btnClearProduct.UseVisualStyleBackColor = false;
+            this.btnClearProduct.Click += new System.EventHandler(this.btnClearProduct_Click);
             // 
-            // btnUpdateUser
+            // btnUpdateProduct
             // 
-            this.btnUpdateUser.BackColor = System.Drawing.Color.Olive;
-            this.btnUpdateUser.FlatAppearance.BorderSize = 0;
-            this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUser.Location = new System.Drawing.Point(359, 320);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(85, 41);
-            this.btnUpdateUser.TabIndex = 19;
-            this.btnUpdateUser.TabStop = false;
-            this.btnUpdateUser.Text = "Update";
-            this.btnUpdateUser.UseVisualStyleBackColor = false;
+            this.btnUpdateProduct.BackColor = System.Drawing.Color.Olive;
+            this.btnUpdateProduct.FlatAppearance.BorderSize = 0;
+            this.btnUpdateProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateProduct.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateProduct.Location = new System.Drawing.Point(359, 320);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(85, 41);
+            this.btnUpdateProduct.TabIndex = 19;
+            this.btnUpdateProduct.TabStop = false;
+            this.btnUpdateProduct.Text = "Update";
+            this.btnUpdateProduct.UseVisualStyleBackColor = false;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
-            // btnSaveUser
+            // btnSaveProduct
             // 
-            this.btnSaveUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSaveUser.FlatAppearance.BorderSize = 0;
-            this.btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUser.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUser.Location = new System.Drawing.Point(252, 320);
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(85, 41);
-            this.btnSaveUser.TabIndex = 20;
-            this.btnSaveUser.TabStop = false;
-            this.btnSaveUser.Text = "Save";
-            this.btnSaveUser.UseVisualStyleBackColor = false;
+            this.btnSaveProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSaveProduct.FlatAppearance.BorderSize = 0;
+            this.btnSaveProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveProduct.ForeColor = System.Drawing.Color.White;
+            this.btnSaveProduct.Location = new System.Drawing.Point(252, 320);
+            this.btnSaveProduct.Name = "btnSaveProduct";
+            this.btnSaveProduct.Size = new System.Drawing.Size(85, 41);
+            this.btnSaveProduct.TabIndex = 20;
+            this.btnSaveProduct.TabStop = false;
+            this.btnSaveProduct.Text = "Save";
+            this.btnSaveProduct.UseVisualStyleBackColor = false;
+            this.btnSaveProduct.Click += new System.EventHandler(this.btnSaveProduct_Click);
             // 
-            // txtPhone
+            // txtProductDescription
             // 
-            this.txtPhone.Location = new System.Drawing.Point(181, 226);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(370, 23);
-            this.txtPhone.TabIndex = 22;
+            this.txtProductDescription.Location = new System.Drawing.Point(181, 226);
+            this.txtProductDescription.Name = "txtProductDescription";
+            this.txtProductDescription.Size = new System.Drawing.Size(370, 23);
+            this.txtProductDescription.TabIndex = 3;
             // 
             // label5
             // 
@@ -105,20 +109,19 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Description:";
             // 
-            // txtPassword
+            // txtProductPrice
             // 
-            this.txtPassword.Location = new System.Drawing.Point(181, 180);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(370, 23);
-            this.txtPassword.TabIndex = 17;
-            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtProductPrice.Location = new System.Drawing.Point(181, 180);
+            this.txtProductPrice.Name = "txtProductPrice";
+            this.txtProductPrice.Size = new System.Drawing.Size(370, 23);
+            this.txtProductPrice.TabIndex = 2;
             // 
-            // txtFullName
+            // txtProductQty
             // 
-            this.txtFullName.Location = new System.Drawing.Point(181, 134);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(370, 23);
-            this.txtFullName.TabIndex = 13;
+            this.txtProductQty.Location = new System.Drawing.Point(181, 134);
+            this.txtProductQty.Name = "txtProductQty";
+            this.txtProductQty.Size = new System.Drawing.Size(370, 23);
+            this.txtProductQty.TabIndex = 1;
             // 
             // label3
             // 
@@ -129,12 +132,12 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Quantity:";
             // 
-            // txtUserName
+            // txtProductName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(181, 88);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(370, 23);
-            this.txtUserName.TabIndex = 9;
+            this.txtProductName.Location = new System.Drawing.Point(181, 88);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(370, 23);
+            this.txtProductName.TabIndex = 0;
             // 
             // label2
             // 
@@ -159,6 +162,7 @@
             this.btnExit.TabStop = false;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -168,9 +172,9 @@
             this.label1.Location = new System.Drawing.Point(4, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 19);
+            this.label1.Size = new System.Drawing.Size(131, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User Module";
+            this.label1.Text = "Product Module";
             // 
             // label4
             // 
@@ -202,37 +206,50 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Category:";
             // 
-            // comboQty
+            // comboCategory
             // 
-            this.comboQty.FormattingEnabled = true;
-            this.comboQty.Location = new System.Drawing.Point(181, 272);
-            this.comboQty.Name = "comboQty";
-            this.comboQty.Size = new System.Drawing.Size(370, 25);
-            this.comboQty.TabIndex = 24;
+            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(181, 272);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(370, 25);
+            this.comboCategory.TabIndex = 4;
+            // 
+            // lblProductID
+            // 
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Location = new System.Drawing.Point(87, 320);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(76, 17);
+            this.lblProductID.TabIndex = 24;
+            this.lblProductID.Text = "Product ID";
+            this.lblProductID.Visible = false;
             // 
             // ProductModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 373);
-            this.Controls.Add(this.comboQty);
+            this.Controls.Add(this.lblProductID);
+            this.Controls.Add(this.comboCategory);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnClearUser);
-            this.Controls.Add(this.btnUpdateUser);
-            this.Controls.Add(this.btnSaveUser);
-            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.btnClearProduct);
+            this.Controls.Add(this.btnUpdateProduct);
+            this.Controls.Add(this.btnSaveProduct);
+            this.Controls.Add(this.txtProductDescription);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtFullName);
+            this.Controls.Add(this.txtProductPrice);
+            this.Controls.Add(this.txtProductQty);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductModuleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductModuleForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -242,21 +259,22 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button btnClearUser;
-        public System.Windows.Forms.Button btnUpdateUser;
-        public System.Windows.Forms.Button btnSaveUser;
-        public System.Windows.Forms.TextBox txtPhone;
+        public System.Windows.Forms.Button btnClearProduct;
+        public System.Windows.Forms.Button btnUpdateProduct;
+        public System.Windows.Forms.Button btnSaveProduct;
+        public System.Windows.Forms.TextBox txtProductDescription;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txtPassword;
-        public System.Windows.Forms.TextBox txtFullName;
+        public System.Windows.Forms.TextBox txtProductPrice;
+        public System.Windows.Forms.TextBox txtProductQty;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox txtUserName;
+        public System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.ComboBox comboQty;
+        public System.Windows.Forms.ComboBox comboCategory;
+        public System.Windows.Forms.Label lblProductID;
     }
 }

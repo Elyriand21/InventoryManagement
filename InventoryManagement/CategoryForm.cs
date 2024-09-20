@@ -41,7 +41,7 @@ namespace InventoryManagement
             con.Close();    // Close the connection to the SQL server
         }
 
-        private void btnUserAdd_Click(object sender, EventArgs e)
+        private void btnCategoryAdd_Click(object sender, EventArgs e)
         {
             CategoryModuleForm categoryModule = new CategoryModuleForm();   // Creates a new CategoryModuleForm
             categoryModule.btnSaveCategory.Enabled = true;  // Since we're adding a new customer, we need to save to the database
@@ -81,6 +81,16 @@ namespace InventoryManagement
                 }
             }
             LoadCategories(); // Reloads customer(s)
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

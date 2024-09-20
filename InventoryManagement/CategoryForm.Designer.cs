@@ -38,22 +38,23 @@
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnUserAdd = new InventoryManagement.CustomerButtons();
+            this.btnCategoryAdd = new InventoryManagement.CustomerButtons();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCategoryAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.btnUserAdd);
+            this.panel1.Controls.Add(this.btnCategoryAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 450);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 56);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(163, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Categories";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvCategories
             // 
@@ -132,18 +134,18 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
-            // btnUserAdd
+            // btnCategoryAdd
             // 
-            this.btnUserAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.Image")));
-            this.btnUserAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageHover")));
-            this.btnUserAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageNormal")));
-            this.btnUserAdd.Location = new System.Drawing.Point(932, 6);
-            this.btnUserAdd.Name = "btnUserAdd";
-            this.btnUserAdd.Size = new System.Drawing.Size(40, 38);
-            this.btnUserAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUserAdd.TabIndex = 1;
-            this.btnUserAdd.TabStop = false;
-            this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
+            this.btnCategoryAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.Image")));
+            this.btnCategoryAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageHover")));
+            this.btnCategoryAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageNormal")));
+            this.btnCategoryAdd.Location = new System.Drawing.Point(932, 6);
+            this.btnCategoryAdd.Name = "btnCategoryAdd";
+            this.btnCategoryAdd.Size = new System.Drawing.Size(40, 38);
+            this.btnCategoryAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCategoryAdd.TabIndex = 1;
+            this.btnCategoryAdd.TabStop = false;
+            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
             // 
             // CategoryForm
             // 
@@ -160,7 +162,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCategoryAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,7 +170,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomerButtons btnUserAdd;
+        private CustomerButtons btnCategoryAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;

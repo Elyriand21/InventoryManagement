@@ -28,47 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUserAdd = new InventoryManagement.CustomerButtons();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnProductAdd = new InventoryManagement.CustomerButtons();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProductAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.btnUserAdd);
+            this.panel1.Controls.Add(this.btnProductAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 450);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 56);
             this.panel1.TabIndex = 4;
-            // 
-            // btnUserAdd
-            // 
-            this.btnUserAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.Image")));
-            this.btnUserAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageHover")));
-            this.btnUserAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageNormal")));
-            this.btnUserAdd.Location = new System.Drawing.Point(932, 6);
-            this.btnUserAdd.Name = "btnUserAdd";
-            this.btnUserAdd.Size = new System.Drawing.Size(40, 38);
-            this.btnUserAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUserAdd.TabIndex = 1;
-            this.btnUserAdd.TabStop = false;
             // 
             // label1
             // 
@@ -81,10 +70,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Products";
             // 
-            // dgvProducts
+            // dgvProduct
             // 
-            this.dgvProducts.AllowUserToAddRows = false;
-            this.dgvProducts.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,24 +81,26 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProducts.ColumnHeadersHeight = 30;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.ColumnHeadersHeight = 30;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumber,
             this.ProductID,
             this.CategoryName,
             this.ProductQty,
             this.ProductPrice,
             this.ProductDescription,
+            this.ProductCategory,
             this.Edit,
             this.Delete});
-            this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProducts.EnableHeadersVisualStyles = false;
-            this.dgvProducts.Location = new System.Drawing.Point(0, 0);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.Size = new System.Drawing.Size(984, 506);
-            this.dgvProducts.TabIndex = 5;
+            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.EnableHeadersVisualStyles = false;
+            this.dgvProduct.Location = new System.Drawing.Point(0, 0);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.Size = new System.Drawing.Size(984, 506);
+            this.dgvProduct.TabIndex = 5;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentClick);
             // 
             // ColumnNumber
             // 
@@ -152,6 +143,13 @@
             this.ProductDescription.HeaderText = "Description";
             this.ProductDescription.Name = "ProductDescription";
             // 
+            // ProductCategory
+            // 
+            this.ProductCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ProductCategory.HeaderText = "Category";
+            this.ProductCategory.Name = "ProductCategory";
+            this.ProductCategory.Width = 94;
+            // 
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -170,22 +168,35 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
+            // btnProductAdd
+            // 
+            this.btnProductAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnProductAdd.Image")));
+            this.btnProductAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnProductAdd.ImageHover")));
+            this.btnProductAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnProductAdd.ImageNormal")));
+            this.btnProductAdd.Location = new System.Drawing.Point(932, 6);
+            this.btnProductAdd.Name = "btnProductAdd";
+            this.btnProductAdd.Size = new System.Drawing.Size(40, 38);
+            this.btnProductAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnProductAdd.TabIndex = 1;
+            this.btnProductAdd.TabStop = false;
+            this.btnProductAdd.Click += new System.EventHandler(this.btnProductAdd_Click);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 506);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvProducts);
+            this.Controls.Add(this.dgvProduct);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductForm";
             this.Text = "ProductForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProductAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,15 +204,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomerButtons btnUserAdd;
+        private CustomerButtons btnProductAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCategory;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
