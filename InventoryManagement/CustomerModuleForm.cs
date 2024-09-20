@@ -54,13 +54,6 @@ namespace InventoryManagement
             btnUpdateCustomer.Enabled = false;
         }
 
-        // Method to remove all text from boxes in CustomerModuleForm
-        public void Clear()
-        {
-            txtCustomerName.Clear();
-            txtCustomerPhone.Clear();
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Are you sure you want to exit?", "Return to Customer Form",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
@@ -92,6 +85,13 @@ namespace InventoryManagement
             {
                 MessageBox.Show(ec.Message);
             }
+        }
+
+        // Method to remove all text from boxes in CustomerModuleForm
+        public void Clear()
+        {
+            txtCustomerName.Clear();
+            txtCustomerPhone.Clear();
         }
     }
 }

@@ -60,5 +60,35 @@ namespace InventoryManagement
                 this.Dispose();
             }
         }
+
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this category?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Sends a command to the SQL Server to UPDATE the place in the database where the usernames match
+                    cm = new SqlCommand("UPDATE tbCategory SET categoryName = @categoryName WHERE categoryID LIKE '" + lblCategoryID.Text + "' ", con);
+                    cm.Parameters.AddWithValue("@categoryName", txtCategoryName.Text);          //
+                    con.Open(); // Opens the connection to the SQL server
+                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    con.Close();    // Closes the connection to the SQL server
+                    MessageBox.Show("Category has been successfully updated");
+                    this.Dispose(); // Closes the window
+                }
+
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        private void btnClearCategory_Click(object sender, EventArgs e)
+        {
+            Clear();
+            btnSaveCategory.Enabled = true;
+            btnUpdateCategory.Enabled = false; 
+        }
     }
 }

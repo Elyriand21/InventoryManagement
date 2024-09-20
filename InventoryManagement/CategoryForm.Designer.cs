@@ -92,6 +92,7 @@
             this.dgvCategories.Name = "dgvCategories";
             this.dgvCategories.Size = new System.Drawing.Size(984, 506);
             this.dgvCategories.TabIndex = 3;
+            this.dgvCategories.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategories_CellContentClick);
             // 
             // ColumnNumber
             // 

@@ -53,6 +53,7 @@
             this.btnClearCategory.TabStop = false;
             this.btnClearCategory.Text = "Clear";
             this.btnClearCategory.UseVisualStyleBackColor = false;
+            this.btnClearCategory.Click += new System.EventHandler(this.btnClearCategory_Click);
             // 
             // btnUpdateCategory
             // 
@@ -67,6 +68,7 @@
             this.btnUpdateCategory.TabStop = false;
             this.btnUpdateCategory.Text = "Update";
             this.btnUpdateCategory.UseVisualStyleBackColor = false;
+            this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
             // 
             // btnSaveCategory
             // 
