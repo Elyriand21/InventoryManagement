@@ -35,10 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
@@ -96,10 +94,8 @@
             this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCategories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumber,
-            this.UserName,
-            this.FullName,
-            this.Password,
-            this.Phone,
+            this.CategoryID,
+            this.CategoryName,
             this.Edit,
             this.Delete});
             this.dgvCategories.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -116,32 +112,18 @@
             this.ColumnNumber.Name = "ColumnNumber";
             this.ColumnNumber.Width = 56;
             // 
-            // UserName
+            // CategoryID
             // 
-            this.UserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.UserName.HeaderText = "User Name";
-            this.UserName.Name = "UserName";
-            this.UserName.Width = 102;
+            this.CategoryID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CategoryID.HeaderText = "Category ID";
+            this.CategoryID.Name = "CategoryID";
+            this.CategoryID.Width = 111;
             // 
-            // FullName
+            // CategoryName
             // 
-            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullName.HeaderText = "Full Name";
-            this.FullName.Name = "FullName";
-            // 
-            // Password
-            // 
-            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.Width = 94;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            this.Phone.Width = 74;
+            this.CategoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CategoryName.HeaderText = "Name";
+            this.CategoryName.Name = "CategoryName";
             // 
             // Edit
             // 
@@ -188,10 +170,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
