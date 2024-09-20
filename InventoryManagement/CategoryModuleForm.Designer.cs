@@ -81,6 +81,7 @@
             this.btnSaveCategory.TabStop = false;
             this.btnSaveCategory.Text = "Save";
             this.btnSaveCategory.UseVisualStyleBackColor = false;
+            this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
             // 
             // txtCategoryName
             // 
@@ -112,6 +113,7 @@
             this.btnExit.TabStop = false;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCustomerModule
             // 
@@ -161,7 +163,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CategoryModuleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryModuleForm";
