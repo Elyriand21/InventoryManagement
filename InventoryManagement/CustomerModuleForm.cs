@@ -7,89 +7,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace InventoryManagement
 {
     public partial class CustomerModuleForm : Form
     {
+        // Creates the connection to the SQL server
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Felix\Documents\dbMS.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlCommand cm = new SqlCommand();   // Creates the variable for SQL commands
+
         public CustomerModuleForm()
         {
             InitializeComponent();
         }
 
-        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        private void btnSaveCustomer_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to save this customer?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Sends a command to the SQL Server to insert a new customer with the values into the Customer table in the database
+                    cm = new SqlCommand("INSERT INTO tbCustomer(customerName,customerPhone)VALUES(@customerName,@customerPhone)", con);
+                    cm.Parameters.AddWithValue("@customerName", txtCustomerName.Text);      //
+                    cm.Parameters.AddWithValue("@customerPhone", txtCustomerPhone.Text);
+                    con.Open(); // Opens the connection to the SQL server
+                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    con.Close();    // Closes the connection to the SQL server
+                    MessageBox.Show("Customer has been saved");
+                    Clear();    // Clears the textboxes for a new customer to be added
+                }
 
+            }
+            catch (Exception ec)    // If anything messes up, indicate what's happening
+            {
+                MessageBox.Show(ec.Message);
+            }
         }
 
-        private void btnClearUser_Click(object sender, EventArgs e)
+        // Method to link the CLEAR button to the Clear() method
+        private void btnClearCustomer_Click(object sender, EventArgs e)
         {
-
+            Clear();
+            btnSaveCustomer.Enabled = true;
+            btnUpdateCustomer.Enabled = false;
         }
 
-        private void btnUpdateUser_Click(object sender, EventArgs e)
+        // Method to remove all text from boxes in CustomerModuleForm
+        public void Clear()
         {
-
+            txtCustomerName.Clear();
+            txtCustomerPhone.Clear();
         }
 
-        private void btnSaveUser_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
+            if(MessageBox.Show("Are you sure you want to exit?", "Return to Customer Form",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // Closes the window
+                this.Dispose();
+            }
         }
 
-        private void txtPhone_TextChanged(object sender, EventArgs e)
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this customer?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Sends a command to the SQL Server to UPDATE the place in the database where the usernames match
+                    cm = new SqlCommand("UPDATE tbCustomer SET customerName = @customerName,customerPhone = @customerPhone WHERE customerId LIKE '" + lblCustomerID.Text + "' ", con);
+                    cm.Parameters.AddWithValue("@customerName", txtCustomerName.Text);          //
+                    cm.Parameters.AddWithValue("@customerPhone", txtCustomerPhone.Text);                //  correct spot in the database
+                    con.Open(); // Opens the connection to the SQL server
+                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    con.Close();    // Closes the connection to the SQL server
+                    MessageBox.Show("Customer has been successfully updated");
+                    this.Dispose(); // Closes the window
+                }
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
         }
     }
 }
