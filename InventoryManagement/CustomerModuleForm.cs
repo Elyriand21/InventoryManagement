@@ -7,87 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace InventoryManagement
 {
     public partial class CustomerModuleForm : Form
     {
+        // Creates the connection to the SQL server
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Felix\Documents\dbMS.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlCommand cm = new SqlCommand();   // Creates the variable for SQL commands
+
         public CustomerModuleForm()
         {
             InitializeComponent();
         }
 
-        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClearUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdateUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSaveUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
