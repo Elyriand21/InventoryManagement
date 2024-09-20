@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClearUser = new System.Windows.Forms.Button();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnSaveUser = new System.Windows.Forms.Button();
+            this.btnClearCustomer = new System.Windows.Forms.Button();
+            this.btnUpdateCustomer = new System.Windows.Forms.Button();
+            this.btnSaveCustomer = new System.Windows.Forms.Button();
             this.txtCustomerPhone = new System.Windows.Forms.TextBox();
             this.lblCustomerPhone = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
@@ -42,45 +42,46 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnClearUser
+            // btnClearCustomer
             // 
-            this.btnClearUser.BackColor = System.Drawing.Color.Maroon;
-            this.btnClearUser.FlatAppearance.BorderSize = 0;
-            this.btnClearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearUser.ForeColor = System.Drawing.Color.White;
-            this.btnClearUser.Location = new System.Drawing.Point(433, 192);
-            this.btnClearUser.Name = "btnClearUser";
-            this.btnClearUser.Size = new System.Drawing.Size(85, 41);
-            this.btnClearUser.TabIndex = 20;
-            this.btnClearUser.Text = "Clear";
-            this.btnClearUser.UseVisualStyleBackColor = false;
+            this.btnClearCustomer.BackColor = System.Drawing.Color.Maroon;
+            this.btnClearCustomer.FlatAppearance.BorderSize = 0;
+            this.btnClearCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnClearCustomer.Location = new System.Drawing.Point(433, 192);
+            this.btnClearCustomer.Name = "btnClearCustomer";
+            this.btnClearCustomer.Size = new System.Drawing.Size(85, 41);
+            this.btnClearCustomer.TabIndex = 20;
+            this.btnClearCustomer.Text = "Clear";
+            this.btnClearCustomer.UseVisualStyleBackColor = false;
+            this.btnClearCustomer.Click += new System.EventHandler(this.btnClearCustomer_Click);
             // 
-            // btnUpdateUser
+            // btnUpdateCustomer
             // 
-            this.btnUpdateUser.BackColor = System.Drawing.Color.Olive;
-            this.btnUpdateUser.FlatAppearance.BorderSize = 0;
-            this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUser.Location = new System.Drawing.Point(316, 192);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(85, 41);
-            this.btnUpdateUser.TabIndex = 21;
-            this.btnUpdateUser.Text = "Update";
-            this.btnUpdateUser.UseVisualStyleBackColor = false;
+            this.btnUpdateCustomer.BackColor = System.Drawing.Color.Olive;
+            this.btnUpdateCustomer.FlatAppearance.BorderSize = 0;
+            this.btnUpdateCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(316, 192);
+            this.btnUpdateCustomer.Name = "btnUpdateCustomer";
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(85, 41);
+            this.btnUpdateCustomer.TabIndex = 21;
+            this.btnUpdateCustomer.Text = "Update";
+            this.btnUpdateCustomer.UseVisualStyleBackColor = false;
             // 
-            // btnSaveUser
+            // btnSaveCustomer
             // 
-            this.btnSaveUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSaveUser.FlatAppearance.BorderSize = 0;
-            this.btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUser.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUser.Location = new System.Drawing.Point(199, 192);
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(85, 41);
-            this.btnSaveUser.TabIndex = 22;
-            this.btnSaveUser.Text = "Save";
-            this.btnSaveUser.UseVisualStyleBackColor = false;
-            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
+            this.btnSaveCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSaveCustomer.FlatAppearance.BorderSize = 0;
+            this.btnSaveCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnSaveCustomer.Location = new System.Drawing.Point(199, 192);
+            this.btnSaveCustomer.Name = "btnSaveCustomer";
+            this.btnSaveCustomer.Size = new System.Drawing.Size(85, 41);
+            this.btnSaveCustomer.TabIndex = 22;
+            this.btnSaveCustomer.Text = "Save";
+            this.btnSaveCustomer.UseVisualStyleBackColor = false;
+            this.btnSaveCustomer.Click += new System.EventHandler(this.btnSaveCustomer_Click);
             // 
             // txtCustomerPhone
             // 
@@ -127,6 +128,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCustomerModule
             // 
@@ -168,9 +170,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 284);
             this.Controls.Add(this.lblCustomerID);
-            this.Controls.Add(this.btnClearUser);
-            this.Controls.Add(this.btnUpdateUser);
-            this.Controls.Add(this.btnSaveUser);
+            this.Controls.Add(this.btnClearCustomer);
+            this.Controls.Add(this.btnUpdateCustomer);
+            this.Controls.Add(this.btnSaveCustomer);
             this.Controls.Add(this.txtCustomerPhone);
             this.Controls.Add(this.lblCustomerPhone);
             this.Controls.Add(this.txtCustomerName);
@@ -190,9 +192,9 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button btnClearUser;
-        public System.Windows.Forms.Button btnUpdateUser;
-        public System.Windows.Forms.Button btnSaveUser;
+        public System.Windows.Forms.Button btnClearCustomer;
+        public System.Windows.Forms.Button btnUpdateCustomer;
+        public System.Windows.Forms.Button btnSaveCustomer;
         public System.Windows.Forms.TextBox txtCustomerPhone;
         private System.Windows.Forms.Label lblCustomerPhone;
         public System.Windows.Forms.TextBox txtCustomerName;

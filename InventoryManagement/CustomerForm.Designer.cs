@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUserAdd = new InventoryManagement.CustomerButtons();
+            this.btnCustomerAdd = new InventoryManagement.CustomerButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCustomerAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCustomers
@@ -76,7 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.btnUserAdd);
+            this.panel1.Controls.Add(this.btnCustomerAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 450);
@@ -84,17 +84,18 @@
             this.panel1.Size = new System.Drawing.Size(984, 56);
             this.panel1.TabIndex = 3;
             // 
-            // btnUserAdd
+            // btnCustomerAdd
             // 
-            this.btnUserAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.Image")));
-            this.btnUserAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageHover")));
-            this.btnUserAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageNormal")));
-            this.btnUserAdd.Location = new System.Drawing.Point(932, 6);
-            this.btnUserAdd.Name = "btnUserAdd";
-            this.btnUserAdd.Size = new System.Drawing.Size(40, 38);
-            this.btnUserAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUserAdd.TabIndex = 1;
-            this.btnUserAdd.TabStop = false;
+            this.btnCustomerAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerAdd.Image")));
+            this.btnCustomerAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnCustomerAdd.ImageHover")));
+            this.btnCustomerAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnCustomerAdd.ImageNormal")));
+            this.btnCustomerAdd.Location = new System.Drawing.Point(932, 6);
+            this.btnCustomerAdd.Name = "btnCustomerAdd";
+            this.btnCustomerAdd.Size = new System.Drawing.Size(40, 38);
+            this.btnCustomerAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCustomerAdd.TabIndex = 1;
+            this.btnCustomerAdd.TabStop = false;
+            this.btnCustomerAdd.Click += new System.EventHandler(this.btnCustomerAdd_Click);
             // 
             // label1
             // 
@@ -167,7 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCustomerAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,7 +177,7 @@
 
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Panel panel1;
-        private CustomerButtons btnUserAdd;
+        private CustomerButtons btnCustomerAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;

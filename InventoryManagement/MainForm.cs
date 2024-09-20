@@ -47,5 +47,11 @@ namespace InventoryManagement
         {
             System.Diagnostics.Debug.WriteLine(msg);
         }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CustomerForm()); // Tells the main form to open the CustomerForm
+
+        }
     }
 }

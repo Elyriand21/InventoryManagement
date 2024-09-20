@@ -174,6 +174,7 @@
             this.btnCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCustomers.TabIndex = 0;
             this.btnCustomers.TabStop = false;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnProduct
             // 
