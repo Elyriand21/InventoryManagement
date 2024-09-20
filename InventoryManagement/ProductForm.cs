@@ -40,7 +40,7 @@ namespace InventoryManagement
             dgvProduct.Rows.Clear();  // Clears all of the rows in the grid so no confusion
 
             // Creates a new command telling the database to select ALL products from the product table. If the search box is used, it will also allow for searching.
-            cm = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(productName, productPrice, productDescription, productCategory) LIKE '%"+txtSearch.Text+"%'", con);
+            cm = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(productId, productName, productPrice, productDescription, productCategory) LIKE '%"+txtSearch.Text+"%'", con);
             con.Open(); // Initiates the request to the database
             dr = cm.ExecuteReader();    // We use ExecuteReader since we will be receiving multiple entries from the database
 
