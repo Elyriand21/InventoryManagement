@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCategoryAdd = new InventoryManagement.CustomerButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,10 +39,9 @@
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnCategoryAdd = new InventoryManagement.CustomerButtons();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategoryAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,12 +56,25 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnCategoryAdd
+            // 
+            this.btnCategoryAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.Image")));
+            this.btnCategoryAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageHover")));
+            this.btnCategoryAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageNormal")));
+            this.btnCategoryAdd.Location = new System.Drawing.Point(932, 6);
+            this.btnCategoryAdd.Name = "btnCategoryAdd";
+            this.btnCategoryAdd.Size = new System.Drawing.Size(40, 38);
+            this.btnCategoryAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCategoryAdd.TabIndex = 1;
+            this.btnCategoryAdd.TabStop = false;
+            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 19);
             this.label1.TabIndex = 0;
@@ -134,19 +147,6 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
-            // btnCategoryAdd
-            // 
-            this.btnCategoryAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.Image")));
-            this.btnCategoryAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageHover")));
-            this.btnCategoryAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnCategoryAdd.ImageNormal")));
-            this.btnCategoryAdd.Location = new System.Drawing.Point(932, 6);
-            this.btnCategoryAdd.Name = "btnCategoryAdd";
-            this.btnCategoryAdd.Size = new System.Drawing.Size(40, 38);
-            this.btnCategoryAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCategoryAdd.TabIndex = 1;
-            this.btnCategoryAdd.TabStop = false;
-            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
-            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -161,8 +161,8 @@
             this.Text = "CategoryForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategoryAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             this.ResumeLayout(false);
 
         }
