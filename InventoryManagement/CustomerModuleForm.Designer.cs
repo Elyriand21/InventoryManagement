@@ -52,6 +52,7 @@
             this.btnClearCustomer.Name = "btnClearCustomer";
             this.btnClearCustomer.Size = new System.Drawing.Size(85, 41);
             this.btnClearCustomer.TabIndex = 20;
+            this.btnClearCustomer.TabStop = false;
             this.btnClearCustomer.Text = "Clear";
             this.btnClearCustomer.UseVisualStyleBackColor = false;
             this.btnClearCustomer.Click += new System.EventHandler(this.btnClearCustomer_Click);
@@ -66,6 +67,7 @@
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(85, 41);
             this.btnUpdateCustomer.TabIndex = 21;
+            this.btnUpdateCustomer.TabStop = false;
             this.btnUpdateCustomer.Text = "Update";
             this.btnUpdateCustomer.UseVisualStyleBackColor = false;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
@@ -80,6 +82,7 @@
             this.btnSaveCustomer.Name = "btnSaveCustomer";
             this.btnSaveCustomer.Size = new System.Drawing.Size(85, 41);
             this.btnSaveCustomer.TabIndex = 22;
+            this.btnSaveCustomer.TabStop = false;
             this.btnSaveCustomer.Text = "Save";
             this.btnSaveCustomer.UseVisualStyleBackColor = false;
             this.btnSaveCustomer.Click += new System.EventHandler(this.btnSaveCustomer_Click);
@@ -89,7 +92,7 @@
             this.txtCustomerPhone.Location = new System.Drawing.Point(172, 149);
             this.txtCustomerPhone.Name = "txtCustomerPhone";
             this.txtCustomerPhone.Size = new System.Drawing.Size(370, 23);
-            this.txtCustomerPhone.TabIndex = 15;
+            this.txtCustomerPhone.TabIndex = 1;
             // 
             // lblCustomerPhone
             // 
@@ -105,7 +108,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(172, 95);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(370, 23);
-            this.txtCustomerName.TabIndex = 19;
+            this.txtCustomerName.TabIndex = 0;
             // 
             // lblCustomerName
             // 
@@ -127,6 +130,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 36);
             this.btnExit.TabIndex = 5;
+            this.btnExit.TabStop = false;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

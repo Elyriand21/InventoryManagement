@@ -70,7 +70,8 @@
             this.btnExit.Location = new System.Drawing.Point(551, 11);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 36);
-            this.btnExit.TabIndex = 5;
+            this.btnExit.TabIndex = 0;
+            this.btnExit.TabStop = false;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -101,7 +102,7 @@
             this.txtUserName.Location = new System.Drawing.Point(183, 111);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(370, 23);
-            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TabIndex = 0;
             // 
             // label3
             // 
@@ -117,7 +118,7 @@
             this.txtFullName.Location = new System.Drawing.Point(183, 159);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(370, 23);
-            this.txtFullName.TabIndex = 2;
+            this.txtFullName.TabIndex = 1;
             // 
             // label4
             // 
@@ -150,7 +151,7 @@
             this.txtPhone.Location = new System.Drawing.Point(183, 303);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(370, 23);
-            this.txtPhone.TabIndex = 2;
+            this.txtPhone.TabIndex = 4;
             // 
             // btnSaveUser
             // 
@@ -162,6 +163,7 @@
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(85, 41);
             this.btnSaveUser.TabIndex = 3;
+            this.btnSaveUser.TabStop = false;
             this.btnSaveUser.Text = "Save";
             this.btnSaveUser.UseVisualStyleBackColor = false;
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
@@ -176,6 +178,7 @@
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(85, 41);
             this.btnUpdateUser.TabIndex = 3;
+            this.btnUpdateUser.TabStop = false;
             this.btnUpdateUser.Text = "Update";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click_1);
@@ -190,6 +193,7 @@
             this.btnClearUser.Name = "btnClearUser";
             this.btnClearUser.Size = new System.Drawing.Size(85, 41);
             this.btnClearUser.TabIndex = 3;
+            this.btnClearUser.TabStop = false;
             this.btnClearUser.Text = "Clear";
             this.btnClearUser.UseVisualStyleBackColor = false;
             this.btnClearUser.Click += new System.EventHandler(this.BtnClearUser_Click);
@@ -208,7 +212,7 @@
             this.txtConfirmPass.Location = new System.Drawing.Point(183, 255);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(370, 23);
-            this.txtConfirmPass.TabIndex = 2;
+            this.txtConfirmPass.TabIndex = 3;
             this.txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // checkBoxShowPass
@@ -218,6 +222,7 @@
             this.checkBoxShowPass.Name = "checkBoxShowPass";
             this.checkBoxShowPass.Size = new System.Drawing.Size(127, 21);
             this.checkBoxShowPass.TabIndex = 8;
+            this.checkBoxShowPass.TabStop = false;
             this.checkBoxShowPass.Text = "Show Password";
             this.checkBoxShowPass.UseVisualStyleBackColor = true;
             this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
