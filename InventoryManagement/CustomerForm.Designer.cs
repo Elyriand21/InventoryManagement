@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagement
 {
-    partial class UserForm
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,33 +38,13 @@
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnUserAdd = new InventoryManagement.CustomerButtons();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.btnUserAdd);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 450);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 56);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Manage Users";
             // 
             // dgvUsers
             // 
@@ -94,9 +72,8 @@
             this.dgvUsers.EnableHeadersVisualStyles = false;
             this.dgvUsers.Location = new System.Drawing.Point(0, 0);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(984, 450);
-            this.dgvUsers.TabIndex = 1;
-            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvUsers.Size = new System.Drawing.Size(984, 506);
+            this.dgvUsers.TabIndex = 2;
             // 
             // ColumnNumber
             // 
@@ -150,6 +127,17 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel1.Controls.Add(this.btnUserAdd);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 450);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 56);
+            this.panel1.TabIndex = 3;
+            // 
             // btnUserAdd
             // 
             this.btnUserAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.Image")));
@@ -161,24 +149,33 @@
             this.btnUserAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnUserAdd.TabIndex = 1;
             this.btnUserAdd.TabStop = false;
-            this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
             // 
-            // UserForm
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Manage Customers";
+            // 
+            // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 506);
-            this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvUsers);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserForm";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "CustomerForm";
+            this.Text = "CustomerForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserAdd)).EndInit();
             this.ResumeLayout(false);
 
@@ -186,10 +183,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.Label label1;
-        private CustomerButtons btnUserAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
@@ -197,5 +191,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.Panel panel1;
+        private CustomerButtons btnUserAdd;
+        private System.Windows.Forms.Label label1;
     }
 }
