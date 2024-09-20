@@ -68,6 +68,7 @@
             this.btnUpdateCustomer.TabIndex = 21;
             this.btnUpdateCustomer.Text = "Update";
             this.btnUpdateCustomer.UseVisualStyleBackColor = false;
+            this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
             // btnSaveCustomer
             // 
@@ -202,6 +203,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCustomerModule;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblCustomerID;
+        public System.Windows.Forms.Label lblCustomerID;
     }
 }

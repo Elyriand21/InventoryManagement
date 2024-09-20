@@ -52,5 +52,39 @@ namespace InventoryManagement
             customerModule.ShowDialog();    // Shows the form
             LoadCustomer(); // Loads the customer(s) from the database
         }
+
+        private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dgvCustomers.Columns[e.ColumnIndex].Name;  // Whenever a cell is clicked, this indicates the name of the column
+
+            // If the column of the cell that's selected is EDIT
+            if (colName == "Edit")
+            {
+                // Create a new UserModuleForm
+                CustomerModuleForm customerModule = new CustomerModuleForm();
+                customerModule.lblCustomerID.Text = dgvCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
+                customerModule.txtCustomerName.Text = dgvCustomers.Rows[e.RowIndex].Cells[2].Value.ToString();      //
+                customerModule.txtCustomerPhone.Text = dgvCustomers.Rows[e.RowIndex].Cells[3].Value.ToString();         //
+
+                customerModule.btnSaveCustomer.Enabled = false; // Disable the save button since we're not adding new users
+                customerModule.btnUpdateCustomer.Enabled = true;    // Since we're editing the user, we need to update the user
+                customerModule.ShowDialog();    // Show the CustomerModuleForm
+            }
+            // If the column is DELETE
+            else if (colName == "Delete")
+            {
+                // Display a box assuring that user wants to delete the selected user
+                if (MessageBox.Show("Are you sure you want to delete this customer?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open(); // Opens the connection to the SQL server
+                    // Creates a SQL commands to delete the entry in the database that matches the username
+                    cm = new SqlCommand("DELETE FROM tbCustomer WHERE customerId LIKE '" + dgvCustomers.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
+                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    con.Close();    // Closes the connection to the SQL server
+                    MessageBox.Show("Customer has been successfully deleted!");
+                }
+            }
+            LoadCustomer(); // Reloads customer(s)
+        }
     }
 }

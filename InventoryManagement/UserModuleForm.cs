@@ -25,8 +25,11 @@ namespace InventoryManagement
         // Method for EXIT button
         private void btnExit_Click(object sender, EventArgs e)
         {
-            // Closes the window
-            this.Dispose();
+            if (MessageBox.Show("Are you sure you want to exit?", "Return to Customer Form", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // Closes the window
+                this.Dispose();
+            }
         }
 
         // Method for SAVE button

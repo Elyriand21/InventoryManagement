@@ -69,5 +69,29 @@ namespace InventoryManagement
                 this.Dispose();
             }
         }
+
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this customer?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Sends a command to the SQL Server to UPDATE the place in the database where the usernames match
+                    cm = new SqlCommand("UPDATE tbCustomer SET customerName = @customerName,customerPhone = @customerPhone WHERE customerId LIKE '" + lblCustomerID.Text + "' ", con);
+                    cm.Parameters.AddWithValue("@customerName", txtCustomerName.Text);          //
+                    cm.Parameters.AddWithValue("@customerPhone", txtCustomerPhone.Text);                //  correct spot in the database
+                    con.Open(); // Opens the connection to the SQL server
+                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    con.Close();    // Closes the connection to the SQL server
+                    MessageBox.Show("Customer has been successfully updated");
+                    this.Dispose(); // Closes the window
+                }
+
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
     }
 }
