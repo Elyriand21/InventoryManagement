@@ -69,10 +69,12 @@ namespace InventoryManagement
             {
                 if (MessageBox.Show("Are you sure you want to update this customer?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Sends a command to the SQL Server to UPDATE the place in the database where the usernames match
+                    // Sends a command to the SQL Server to UPDATE the place in the database where the customerId matches
                     cm = new SqlCommand("UPDATE tbCustomer SET customerName = @customerName,customerPhone = @customerPhone WHERE customerId LIKE '" + lblCustomerID.Text + "' ", con);
-                    cm.Parameters.AddWithValue("@customerName", txtCustomerName.Text);          //
+
+                    cm.Parameters.AddWithValue("@customerName", txtCustomerName.Text);                  //  This section adds onto the command to the SQL server telling it what information
                     cm.Parameters.AddWithValue("@customerPhone", txtCustomerPhone.Text);                //  correct spot in the database
+
                     con.Open(); // Opens the connection to the SQL server
                     cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
                     con.Close();    // Closes the connection to the SQL server

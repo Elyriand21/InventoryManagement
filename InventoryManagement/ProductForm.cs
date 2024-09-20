@@ -26,18 +26,19 @@ namespace InventoryManagement
 
         private void btnProductAdd_Click(object sender, EventArgs e)
         {
-            ProductModuleForm productModule = new ProductModuleForm();   // Creates a new CategoryModuleForm
-            productModule.btnSaveProduct.Enabled = true;  // Since we're adding a new customer, we need to save to the database
-            productModule.btnUpdateProduct.Enabled = false;   // No need to update as this customer does NOT exist within the database 
+            ProductModuleForm productModule = new ProductModuleForm();   // Creates a new ProductModuleForm
+            productModule.btnSaveProduct.Enabled = true;  // Since we're adding a new product, we need to save to the database
+            productModule.btnUpdateProduct.Enabled = false;   // No need to update as this product does NOT exist within the database 
             productModule.ShowDialog();    // Shows the form
             LoadProduct();
         }
 
+        // Method to handle loading all products
         public void LoadProduct()
         {
             int i = 0;  // Creates a variable to track the rows
             dgvProduct.Rows.Clear();  // Clears all of the rows in the grid so no confusion
-            cm = new SqlCommand("SELECT * FROM tbProduct", con);   // Creates a new command telling the database to select ALL users from the users table
+            cm = new SqlCommand("SELECT * FROM tbProduct", con);   // Creates a new command telling the database to select ALL products from the product table
             con.Open(); // Initiates the request to the database
             dr = cm.ExecuteReader();    // We use ExecuteReader since we will be receiving multiple entries from the database
 
@@ -45,12 +46,13 @@ namespace InventoryManagement
             while (dr.Read())
             {
                 i++;    // Increase the row number
-                dgvProduct.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString());   // Add the user that corresponds with the row
+                dgvProduct.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString());   // Add the product that corresponds with the row
             }
             dr.Close(); // Since we're finished reading the information, close the reader
             con.Close();    // Close the connection to the SQL server
         }
 
+        // Method to handle what happens when the cell is clicked
         private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvProduct.Columns[e.ColumnIndex].Name;  // Whenever a cell is clicked, this indicates the name of the column
@@ -58,36 +60,34 @@ namespace InventoryManagement
             // If the column of the cell that's selected is EDIT
             if (colName == "Edit")
             {
-                ProductModuleForm productModule = new ProductModuleForm();   // Create a new CustomerModuleForm
-                productModule.lblProductID.Text = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();        //
-                productModule.txtProductName.Text = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();        //
-                productModule.txtProductQty.Text = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();      //  Fills the appropriate information from the
-                productModule.txtProductPrice.Text = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();     //  datagrid
-                productModule.txtProductDescription.Text = dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString();     //  datagrid
-                productModule.comboCategory.Text = dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString();     //  datagrid
+                ProductModuleForm productModule = new ProductModuleForm();   // Create a new ProductModuleForm
+                productModule.lblProductID.Text = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();            //
+                productModule.txtProductName.Text = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();          //
+                productModule.txtProductQty.Text = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();           //  Fills the appropriate information from the datagrid
+                productModule.txtProductPrice.Text = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();         //
+                productModule.txtProductDescription.Text = dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString();   //  
+                productModule.comboCategory.Text = dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString();           //  
 
-
-
-                productModule.btnSaveProduct.Enabled = false; // Disable the save button since we're not adding new customers
-                productModule.btnUpdateProduct.Enabled = true;    // Since we're editing the customer, we need to update the customer
-                productModule.ShowDialog();    // Show the CustomerModuleForm
+                productModule.btnSaveProduct.Enabled = false; // Disable the save button since we're not adding new products
+                productModule.btnUpdateProduct.Enabled = true;    // Since we're editing the product, we need to update the product
+                productModule.ShowDialog();    // Show the ProductModuleForm
             }
             // If the column is DELETE
             else if (colName == "Delete")
             {
-                // Display a box assuring that user wants to delete the selected customer
+                // Display a box assuring that operator wants to delete the selected product
                 if (MessageBox.Show("Are you sure you want to delete this product?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open(); // Opens the connection to the SQL server
 
-                    // Creates a SQL commands to delete the entry in the database that matches the customerId
+                    // Creates a SQL commands to delete the entry in the database that matches the productId
                     cm = new SqlCommand("DELETE FROM tbProduct WHERE productId LIKE '" + dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                    cm.ExecuteNonQuery();   // Tells the database to insert. We use this instead of ExecuteQuery because we're modifying, not querying
+                    cm.ExecuteNonQuery();   // Tells the database to delete. We use this instead of ExecuteQuery because we're modifying, not querying
                     con.Close();    // Closes the connection to the SQL server
                     MessageBox.Show("Product has been successfully deleted!");
                 }
             }
-            LoadProduct();
+            LoadProduct();      // Re-loads the products
         }
     }
 }
